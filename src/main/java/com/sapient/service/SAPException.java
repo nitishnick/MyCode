@@ -1,6 +1,5 @@
 package com.sapient.service;
 
-
 /**
  * Custom Exception class.
  * 
@@ -13,8 +12,8 @@ public class SAPException extends Exception {
 	private Throwable cause;
 
 	public SAPException(String message, Exception cause) {
-		this.message=message;
-		this.cause =cause;
+		this.message = message;
+		this.cause = cause;
 	}
 
 	public SAPException(String message) {
@@ -25,10 +24,8 @@ public class SAPException extends Exception {
 		return message;
 	}
 
-
 	public Throwable getCause() {
 		return cause;
 	}
-
 
 }
