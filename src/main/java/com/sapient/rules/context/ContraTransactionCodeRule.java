@@ -16,8 +16,6 @@ public class ContraTransactionCodeRule implements IRuleStrategy {
 	/**
 	 * In the grouped table, for one SUM, there can be either Buy or Sell
 	 * 
-	 * 
-	 * 
 	 */
 	@Override
 	public List<GroupOrderWarningResponse> applyRuleStrategy(List<GroupedTradeMapping> list) {
@@ -51,7 +49,7 @@ public class ContraTransactionCodeRule implements IRuleStrategy {
 				}
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 
 		return response;
