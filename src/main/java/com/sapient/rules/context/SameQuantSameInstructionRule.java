@@ -23,7 +23,7 @@ import com.sapient.service.SAPException;
 		 * group by same quantity and then same transaction details, 
 		 * if MORE THAN one value found in the grouping list, then rule 
 		 * violation success.
-		 * @throws SAPException 
+		 * @throws SAPException .
 		 */
 		@SuppressWarnings({ "unchecked", "rawtypes" })
 		@Override

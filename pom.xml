@@ -9,8 +9,6 @@
 
 	<properties>
 		<global.version>1.0.0</global.version>
-		<jdk.src.version>1.8</jdk.src.version>
-		<jdk.target.version>1.8</jdk.target.version>
 		<dashboard.version>1.0.0-beta-1</dashboard.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
