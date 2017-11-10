@@ -5,11 +5,10 @@ import java.util.List;
 public class TradeDataProperties {
 	
 	private List<TradeData> tradeDataList;
-	int quantity;
-	int avgLimitPrice;
-	String orderInstructionDetails;
-	
-	
+	private int quantity;
+	private int avgLimitPrice;
+	private String orderInstructionDetails;
+		
 	public int getQuantity() {
 		return quantity;
 	}
