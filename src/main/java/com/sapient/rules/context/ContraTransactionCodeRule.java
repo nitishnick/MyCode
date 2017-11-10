@@ -54,24 +54,5 @@ public class ContraTransactionCodeRule implements IRuleStrategy {
 
 		return response;
 	}
-	/*
-	 * private List<TradeData> denormailse(List<GroupedTradeMapping> list) {
-	 * List<TradeData> lst = null; for (Iterator it1 = list.iterator();
-	 * it1.hasNext();) { GroupedTradeMapping gTM = (GroupedTradeMapping)
-	 * it1.next();
-	 * 
-	 * TradeData data = new TradeData(); Double averagePrice =
-	 * gTM.getAvgLimitPrice(); String orderInstructionDetails =
-	 * gTM.getOrderInstructionDetails(); Integer sumQuantity =
-	 * gTM.getSumQuantity(); List<Trade> trades = new ArrayList<>(); for (Trade
-	 * t : trades) { data.setLimitPrice(t.getLimitPrice());
-	 * data.setOrderId(t.getOrderId());
-	 * data.setOrderInstructionDetails(orderInstructionDetails);
-	 * data.setOrderInstructions(t.getOrderInstructions());
-	 * data.setQuantity(t.getQuantity()); data.setSecurityId(t.getSecurityId());
-	 * data.setSumQuantity(sumQuantity); data.setSymbol(t.getSymbol());
-	 * data.setTransactionCode(t.getTransactionCode()); lst.add(data); }
-	 * 
-	 * } return lst; }
-	 */
+	
 }
