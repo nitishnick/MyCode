@@ -27,7 +27,7 @@ public class TradeService implements ITradeService {
 	
 	@Autowired
 	@Qualifier("tradeDao")
-	private ITradeDao dao;
+	private ITradeDao tradeDao;
 
 	// OrderId SecurityId Transaction Code Symbol Quantity Limit Price Order
 	// Instructions
@@ -47,7 +47,7 @@ public class TradeService implements ITradeService {
 	private boolean saveGroupedData(Map<String, Map<String, List<TradeData>>> tradeData) {
 
 		try {
-		return 	dao.saveTradeData(tradeData);
+		return 	tradeDao.saveTradeData(tradeData);
 		} catch (Exception e) {
 		}
 		return false;
@@ -76,7 +76,6 @@ public class TradeService implements ITradeService {
 									      return l;
 									      
 									}))
-							
 							));
 			return map;
 			
@@ -85,21 +84,16 @@ public class TradeService implements ITradeService {
 		return null;
 	}
 
-
-
 	@Override
 	public boolean saveWarnings(List<GroupOrderWarningResponse> ruleWarnings) {
 		boolean success = false;
 		try{
-			return success = dao.saveWarnings(ruleWarnings);
+			return success = tradeDao.saveWarnings(ruleWarnings);
 		}catch (Exception e) {
 		}
 		
 		
 		return success;
 	}
-
-
-	
 
 }
