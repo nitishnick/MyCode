@@ -22,7 +22,7 @@ import com.sapient.service.SAPException;
  */
 @Service("strategyContext")
 public class StrategyContext implements IStrategyContext {
-	static final Logger logger = Logger.getLogger(TradeDao.class);
+	private static final Logger logger = Logger.getLogger(TradeDao.class);
 
 	@Autowired
 	@Qualifier("tradeDao")
