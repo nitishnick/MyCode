@@ -9,8 +9,6 @@ package com.sapient.service;
  */
 public class SAPException extends Exception {
 
-	private static final long serialVersionUID = 7563480806584155820L;
-	
 	private String message;
 	private Throwable cause;
 
