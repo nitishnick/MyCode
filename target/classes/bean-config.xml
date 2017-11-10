@@ -1,0 +1,19 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<beans>
+		
+		<bean id="mailProperties"
+			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+
+			<property name="location" value="classpath:application.properties" />
+
+		</bean>
+		<!-- <bean id="sampleDao" class="com.sapient.test.SampleDAO">
+			<constructor-arg ref="dataSource"></constructor-arg>
+		</bean> -->
+	</beans>
+
+</beans>

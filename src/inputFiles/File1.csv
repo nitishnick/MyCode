@@ -1,0 +1,4 @@
+OrderId,SecurityId,Transaction Code,Symbol,Quantity,Limit Price,Order Instructions
+1,1,BUY,IDEA,1000,10,IDEA BUY -A1
+2,2,BUY,AIRTEL,1200,12, Airtel Buy -A1
+3,1,Buy,IDEA,1000,2,IDEA BUY -A11
