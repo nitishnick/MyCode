@@ -22,10 +22,8 @@ public class GroupedTradeMapping implements java.io.Serializable {
 
 
 	private long groupId;
-
 	
 	private int sumQuantity;
-
 
 	private double avgLimitPrice;
 
