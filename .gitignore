@@ -1,2 +1,14 @@
 
 *.prefs
+
+*.lst
+
+target/classes/META-INF/maven/sampleExercise/com\.sap/pom\.properties
+
+\.project
+
+\.classpath
+
+*.MF
+
+*.properties
