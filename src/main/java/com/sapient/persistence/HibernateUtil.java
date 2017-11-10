@@ -15,7 +15,6 @@ public class HibernateUtil {
            SessionFactory sf = cfg.buildSessionFactory();
            
            return sf;
-            
         }
         catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
@@ -27,6 +26,9 @@ public class HibernateUtil {
         return sessionFactory;
     }
     
+    /**
+     * for closing the connection pool.
+     */
     public static void shutdown() {
     	// Close caches and connection pools
     	getSessionFactory().close();
