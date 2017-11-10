@@ -54,13 +54,6 @@ public class TradeService implements ITradeService {
 	}
 
 
-
-	private boolean saveGroupedData() {
-		return false;
-	}
-
-
-
 	private Collector<TradeData, ?, Map<String, List<TradeData>>> groupByTrasactionCode(){
 		return Collectors.groupingBy(p->p.getTransactionCode());
 	}
