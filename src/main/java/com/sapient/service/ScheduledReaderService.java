@@ -54,12 +54,7 @@ public class ScheduledReaderService implements IScheduledReaderService {
 				throw new SAPException("property value missing in .props file!");
 			}
 
-			/*if (this.tradeDataList.size() != 0) { //that is first time
-
-				newFilesToRead = readAllFilePathsFromConsolidated(consolidatedPathsFilePath);
-			} else {*/
 				newFilesToRead = readNewFilePathsFromConsolidated(consolidatedPathsFilePath, false);
-//			}
 	//		validate(); // to validate the data inside the file
  		} catch (Exception e) {
 			throw new SAPException("", e);
