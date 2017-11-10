@@ -44,7 +44,7 @@ public class ConsumerThread implements Runnable {
 	@Qualifier("sameQuantSameInstructionRule")
 	private IRuleStrategy sameQuantSameInstructionRule;
 
-	private boolean oneTimeOnly;
+	private boolean oneTimeOnly;//flag
 
 	public ConsumerThread() {
 	}
