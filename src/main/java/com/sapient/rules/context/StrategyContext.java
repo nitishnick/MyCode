@@ -24,6 +24,7 @@ import com.sapient.service.SAPException;
 public class StrategyContext implements IStrategyContext {
 	private static final Logger logger = Logger.getLogger(TradeDao.class);
 
+	private List<GroupedTradeMapping> groupedTrList;
 	@Autowired
 	@Qualifier("tradeDao")
 	private ITradeDao tradeDao;
@@ -32,12 +33,10 @@ public class StrategyContext implements IStrategyContext {
 		return tradeDao.fetchGroupedTrades();
 	}
 
-	private List<GroupedTradeMapping> groupedTrList;
-
 	public List<GroupOrderWarningResponse> applyRuleStrategy(IRuleStrategy ruleStrategy) throws SAPException {
-		if (groupedTrList == null || groupedTrList.isEmpty())
+		if (groupedTrList == null || groupedTrList.isEmpty()){
 			groupedTrList = fetchGroupedTrades();
-
+		}
 		return ruleStrategy.applyRuleStrategy(groupedTrList);
 	}
 
