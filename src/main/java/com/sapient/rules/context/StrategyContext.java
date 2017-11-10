@@ -25,9 +25,6 @@ public class StrategyContext implements IStrategyContext {
 	static final Logger logger = Logger.getLogger(TradeDao.class);
 
 	@Autowired
-	private ITradeService tradeService;
-
-	@Autowired
 	@Qualifier("tradeDao")
 	private ITradeDao tradeDao;
 
