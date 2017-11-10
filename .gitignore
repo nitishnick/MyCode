@@ -1,2 +1,13 @@
 
 *.prefs
+/target/
+
+*.class
+
+\.project
+
+\.classpath
+
+*.MF
+
+*.properties
