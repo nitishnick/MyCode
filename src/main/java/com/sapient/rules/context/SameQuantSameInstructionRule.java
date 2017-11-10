@@ -16,8 +16,7 @@ import com.sapient.service.SAPException;
 
 	@Service("sameQuantSameInstructionRule")
 	public class SameQuantSameInstructionRule implements IRuleStrategy {
-		
-		static final Logger logger = Logger.getLogger(TradeDao.class);
+		private static final Logger logger = Logger.getLogger(TradeDao.class);
 
 		/**
 		 * group by same quantity and then same transaction details, 
@@ -28,7 +27,7 @@ import com.sapient.service.SAPException;
 		@SuppressWarnings({ "unchecked", "rawtypes" })
 		@Override
 		public List<GroupOrderWarningResponse> applyRuleStrategy(List<GroupedTradeMapping> list) throws SAPException {
-			Map<Integer, Map<String, List<Long>>> map = null;
+			Map<Integer, Map<String, List<Long>>> map =  null;
 			List<GroupOrderWarningResponse> response = new ArrayList<>();
 			try{
 				 map = list.stream().collect(Collectors.groupingBy(p -> p.getSumQuantity(), 
