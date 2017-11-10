@@ -119,7 +119,11 @@ public class ScheduledReaderService implements IScheduledReaderService {
 	public List<String> getListOfFilePaths() {
 		return listOfFilePaths;
 	}
-
+/**
+ * static class returns data bean in futures.
+ * @author nrohil
+ *
+ */
 	static class Task implements Callable<List<TradeData>> {
 		String path;
 
@@ -168,11 +172,9 @@ public class ScheduledReaderService implements IScheduledReaderService {
 
 		@Override
 		public List<TradeData> call() throws Exception {
-
 			try {
 				return readAllFilesData(this.path);
 			} catch (SAPException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			return Collections.emptyList();
