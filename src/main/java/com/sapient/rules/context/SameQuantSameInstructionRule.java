@@ -20,7 +20,7 @@ import com.sapient.service.SAPException;
 		static final Logger logger = Logger.getLogger(TradeDao.class);
 
 		/**
-		 * group by same quantity and then same transaction details, 
+		 * it groups by same quantity and then same transaction details, 
 		 * if MORE THAN one value found in the grouping list, then rule 
 		 * violation success.
 		 * @throws SAPException 
@@ -31,6 +31,7 @@ import com.sapient.service.SAPException;
 			Map<Integer, Map<String, List<Long>>> map = null;
 			List<GroupOrderWarningResponse> response = new ArrayList<>();
 			try{
+				
 				 map = list.stream().collect(Collectors.groupingBy(p -> p.getSumQuantity(), 
 					Collectors.groupingBy(p->p.getOrderInstructionDetails(),
 					Collectors.collectingAndThen(Collectors.toList(), l->{
