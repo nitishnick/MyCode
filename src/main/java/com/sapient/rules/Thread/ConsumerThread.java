@@ -24,7 +24,7 @@ import com.sapient.service.TradeService;
 @Configuration("consumerThread")
 public class ConsumerThread implements Runnable {
 
-	Semaphore semaphore = null;
+	private Semaphore semaphore = null;
 
 	static final Logger logger = Logger.getLogger(TradeDao.class);
 
