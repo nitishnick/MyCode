@@ -70,7 +70,7 @@ public class ConsumerThread implements Runnable {
 			} catch (SAPException e) {
 				e.printStackTrace();
 			} finally {
-				
+				System.out.println("");
 			}
 
 			if (oneTimeOnly) {
