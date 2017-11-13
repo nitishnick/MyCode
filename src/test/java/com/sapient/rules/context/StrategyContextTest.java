@@ -17,7 +17,7 @@ public class StrategyContextTest {
 	IRuleStrategy ruleS = null;
 
 	
-    @Before
+   /* @Before
     public void initData() {
     	System.out.println();
     	strategyContext = (StrategyContext) new ClassPathXmlApplicationContext(
@@ -35,6 +35,6 @@ public class StrategyContextTest {
 	public  void  givenStrategyContext_applyContraTransactionOrderRuleStrategy() throws SAPException{
     	ruleS = new ContraTransactionCodeRule();
     	strategyContext.applyRuleStrategy(ruleS);
-	}
+	}*/
     
 }
