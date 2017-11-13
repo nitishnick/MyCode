@@ -2,8 +2,8 @@ package com.sapient.service;
 
 public class ScheduledReaderServiceTest {
 	
-	private String path=null;
-	IScheduledReaderService readerService = null;
+//	private String path=null;
+//	IScheduledReaderService readerService = null;
    /* @Before
     public void initData() {
     	path="C:\\readFolder\\FilePaths.txt";
