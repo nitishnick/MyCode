@@ -48,8 +48,8 @@ public class ConsumerThread implements Runnable {
 	public ConsumerThread() {
 	}
 
-	public ConsumerThread(Semaphore semaphore, boolean oneTimeOnly) {
-		this.semaphore = semaphore;
+	public ConsumerThread(Semaphore sem, boolean oneTimeOnly) {
+		this.semaphore = sem;
 		this.oneTimeOnly = oneTimeOnly;
 	}
 
