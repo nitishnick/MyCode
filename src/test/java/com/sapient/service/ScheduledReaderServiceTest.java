@@ -1,18 +1,5 @@
 package com.sapient.service;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.List;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.sapient.data.TradeData;
-
-import junit.framework.Assert;
-
 public class ScheduledReaderServiceTest {
 	
 	private String path=null;
