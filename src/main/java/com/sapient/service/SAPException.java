@@ -8,6 +8,10 @@ package com.sapient.service;
  */
 public class SAPException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String message;
 	private Throwable cause;
 
