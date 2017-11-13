@@ -69,6 +69,8 @@ public class ConsumerThread implements Runnable {
 				boolean saved = getTradeService().saveWarnings(ruleWarningList);
 			} catch (SAPException e) {
 				e.printStackTrace();
+			} finally {
+				
 			}
 
 			if (oneTimeOnly) {
