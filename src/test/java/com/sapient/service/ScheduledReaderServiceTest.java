@@ -17,7 +17,7 @@ public class ScheduledReaderServiceTest {
 	
 	private String path=null;
 	IScheduledReaderService readerService = null;
-    @Before
+   /* @Before
     public void initData() {
     	path="C:\\readFolder\\FilePaths.txt";
     	
@@ -67,6 +67,6 @@ public class ScheduledReaderServiceTest {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-    }
+    }*/
 
 }
