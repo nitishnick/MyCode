@@ -25,7 +25,6 @@ import com.sapient.service.TradeService;
 public class ConsumerThread implements Runnable {
 
 	Semaphore semaphore = null;
-
 	static final Logger logger = Logger.getLogger(TradeDao.class);
 
 	@Autowired
@@ -60,14 +59,14 @@ public class ConsumerThread implements Runnable {
 			this.semaphore.release();
 			// receives signal
 			try {
-				List<GroupOrderWarningResponse> ruleWarnings = getStrategyContext()
+				List<GroupOrderWarningResponse> ruleWarningList = getStrategyContext()
 						.applyRuleStrategy(getContraTransactionCodeRule());
 				List<GroupOrderWarningResponse> sameQuantSameInstructionWarnings = getStrategyContext()
 						.applyRuleStrategy(getSameQuantSameInstructionRule());
 
-				ruleWarnings.addAll(sameQuantSameInstructionWarnings);
+				ruleWarningList.addAll(sameQuantSameInstructionWarnings);
 
-				boolean saved = getTradeService().saveWarnings(ruleWarnings);
+				boolean saved = getTradeService().saveWarnings(ruleWarningList);
 			} catch (SAPException e) {
 				e.printStackTrace();
 			}
