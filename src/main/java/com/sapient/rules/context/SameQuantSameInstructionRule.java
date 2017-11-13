@@ -28,15 +28,17 @@ public class SameQuantSameInstructionRule implements IRuleStrategy {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public List<GroupOrderWarningResponse> applyRuleStrategy(List<GroupedTradeMapping> list) throws SAPException {
-		Map<Integer, Map<String, List<Long>>> map = null;
+		Map<Integer, Map<String, List<Long>>> tableMap = null;
 		List<GroupOrderWarningResponse> response = new ArrayList<>();
 		try {
-			map = list.stream().collect(Collectors.groupingBy(p -> p.getSumQuantity(), Collectors.groupingBy(
-					p -> p.getOrderInstructionDetails(), Collectors.collectingAndThen(Collectors.toList(), l -> {
+			tableMap = list.stream().collect(Collectors.groupingBy(p -> p.getSumQuantity(), Collectors.groupingBy(
+					p -> p.getOrderInstructionDetails(), Collectors.collectingAndThen(Collectors.toList(), l -> 
+					{
 						return l.stream().map(GroupedTradeMapping::getGroupId).distinct().collect(Collectors.toList());
-					}))));
+					}
+					))));
 
-			for (Iterator it = map.values().iterator(); it.hasNext();) {
+			for (Iterator it = tableMap.values().iterator(); it.hasNext();) {
 				Map<String, List<GroupedTradeMapping>> mp = (Map<String, List<GroupedTradeMapping>>) it.next();
 				for (Iterator it2 = mp.values().iterator(); it2.hasNext();) {
 					List<GroupedTradeMapping> responseList = (List<GroupedTradeMapping>) it2.next();
